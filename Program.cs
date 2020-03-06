@@ -21,7 +21,7 @@ namespace robot_authentification
         static void WebToBase(string user_URL, string appr_KEY)
         {
             DateTime dateTime = DateTime.Now;
-            string connStr = "server=fclick.mysql.tools;user=fclick_platform;database=fclick_platform;password=m9E6cn5D1aLZ;";
+            string connStr = "(localdb)/MSSQLLocalDB;";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             string sqlcheck = "SELECT website FROM `account` WHERE website='" + user_URL + "'";
@@ -107,7 +107,7 @@ namespace robot_authentification
                     Browser0 = new ChromeDriver(headoptions);
                     List<Urls> urls = new List<Urls>();
                     List<Tokens> tokens = new List<Tokens>();
-                    string connStr = "server=fclick.mysql.tools;user=fclick_platform;database=fclick_platform;password=m9E6cn5D1aLZ;";
+                    string connStr = "server=(localdb)/MSSQLLocalDB;";
                     MySqlConnection conn = new MySqlConnection(connStr);
                     conn.Open();
                     string sql = "SELECT website,token FROM `account` WHERE emailverf='1'";
