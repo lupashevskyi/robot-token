@@ -21,7 +21,7 @@ namespace robot_authentification
         {
             
             
-            string connStr = "Server=fclick.mysql.tools;Database=fclick_platform;User Id=fclick_platform;Password=m9E6cn5D1aLZ;";
+            string connStr = "";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             string sql = "SELECT website,token FROM `account` ";//WHERE emailverf='0'
