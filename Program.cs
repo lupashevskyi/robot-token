@@ -5,8 +5,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using MySql.Data.MySqlClient;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace robot_authentification
 {
